@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>俄罗斯方块 · Tetris</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>🧱 俄罗斯方块</h1>
+      <div class="scores">
+        <div class="score-box"><span class="label">分数</span><span id="score">0</span></div>
+        <div class="score-box"><span class="label">消行</span><span id="lines">0</span></div>
+        <div class="score-box"><span class="label">等级</span><span id="level">1</span></div>
+      </div>
+    </header>
+    <div class="bar">
+      <p class="tip">← → 移动，↑/X 旋转，↓ 软降，空格 硬降；触屏滑动，点击旋转</p>
+      <button id="new">新游戏</button>
+    </div>
+    <div class="stage">
+      <div class="play">
+        <canvas id="game" width="240" height="480"></canvas>
+        <div class="side">
+          <div class="next-label">下一个</div>
+          <canvas id="next" width="96" height="96"></canvas>
+          <button id="pause">暂停</button>
+        </div>
+      </div>
+      <div id="overlay" class="overlay hidden">
+        <div class="panel">
+          <div class="big" id="ov-title">游戏结束</div>
+          <div class="sub" id="ov-sub"></div>
+          <button id="ov-btn">再来一局</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
